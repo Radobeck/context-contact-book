@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import Counter from './components/Counter';
+import Navbar from './components/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import AddForm from './components/AddForm';
+import ContactList from './components/ContactList';
+const { Header, Content, Footer } = Layout;
 
-function App() {
+const App = () => {
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Layout>
+      <div className="demo-logo" />
+      <Navbar />
 
+      <Content
+        className="site-layout"
+        style={{
+          padding: '0 50px',
+        }}
+      >
+        <div
+          style={{
+            padding: 24,
+            minHeight: 380,
+            background: colorBgContainer,
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/counter" element={<Counter />} />
+            <Route path="/add" element={<AddForm />} />
+            <Route path="/contacts" element={<ContactList />} />
+          </Routes>
+        </div>
+      </Content>
+      <Footer
+        style={{
+          textAlign: 'center',
+        }}
+      >
+        Ant Design ©2023 Created by Ant UED
+      </Footer>
+    </Layout>
+  );
+};
 export default App;

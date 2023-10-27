@@ -1,0 +1,18 @@
+{
+  "contacts": [
+    {
+      "name": "Bayish",
+      "lastName": "AAAA",
+      "phone": "9964567656789",
+      "imageUrl": "https://images.unsplash.com/photo-1625215081436-85323ed5042c?auto=format&fit=crop&q=60&w=400&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8anBlZ3xlbnwwfHwwfHx8MA%3D%3D",
+      "id": 1
+    },
+    {
+      "name": "AAA",
+      "lastName": "BBB",
+      "phone": "21232131",
+      "imageUrl": "https://images.unsplash.com/photo-1625215081436-85323ed5042c?auto=format&fit=crop&q=60&w=400&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8anBlZ3xlbnwwfHwwfHx8MA%3D%3D",
+      "id": 2
+    }
+  ]
+}
